@@ -8,10 +8,16 @@ import lombok.ToString;
 
 @Data
 @NoArgsConstructor
-@AllArgsConstructor
 @ToString
 @Entity(name = "student")
 public class Student {
+    public Student(String firstName, String lastName, String email, Integer age) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+        this.age = age;
+    }
+
     @Id
     @SequenceGenerator(
             name = "student_sequence",
